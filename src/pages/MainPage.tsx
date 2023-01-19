@@ -23,7 +23,11 @@ export default function MainPage({ gymEvents, setGymEvents }) {
           sx={{ paddingTop: "30px" }}
         >
           {gymEvents.map((gymEvent) => (
-            <EventTile gymEvent={gymEvent} />
+            <EventTile
+              gymEvent={gymEvent}
+              gymEvents={gymEvents}
+              setGymEvents={setGymEvents}
+            />
           ))}
         </Stack>
       </Container>
